@@ -8,10 +8,15 @@ It supports **interactive querying** with highlighting, synonym expansion, and f
 We use the **lnc.ltc weighting scheme**:
 
 - **Document weight (lnc):**
-w(d,t) = (1 + log10(tf_d,t)) / |d|
+$w(d,t) = \frac{1 + \log_{10}(tf_{d,t})}{|d|}$.
 
 - **Query weight (ltc):**
-w(q,t) = (1 + log10(tf_q,t)) * log10(N / df_t)
+
+$$
+w(q,t) = \left( 1 + \log_{10}\left(tf_{q,t}\right) \right) \times \log_{10}\left( \frac{N}{df_t} \right)
+$$
+
+
 -**Stopword Removal:** stopwords are filtered out from queries before scoring.  
 - **Synonyms (WordNet):** scaled by **0.7** of direct query term weight.  
 - **Soundex-mapped terms (typos → canonical terms):** treated as full-weight direct terms.  
