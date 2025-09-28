@@ -1,9 +1,9 @@
-# 🔎 VSM Search Engine (lnc.ltc + Soundex + WordNet) for IR assignment
+#  VSM Search Engine (lnc.ltc + Soundex + WordNet) for IR assignment
 
 This assignment implements a **Vector Space Model (VSM)** search engine over the corpus provide.
 It supports **interactive querying** with highlighting, synonym expansion, and fuzzy matching.
 
-## 📐 Retrieval Model
+##  Retrieval Model
 
 We use the **lnc.ltc weighting scheme**:
 
@@ -17,7 +17,7 @@ w(q,t) = (1 + log10(tf_q,t)) * log10(N / df_t)
 - **Soundex-mapped terms (typos → canonical terms):** treated as full-weight direct terms.  
 - **Final score:** cosine similarity between query and document vectors.
 
-## ✨ Features
+##  Features
 
 - **Core model:** Vector Space Model with lnc.ltc weighting.
 - **Stopword Removal:** improves accuracy by ignoring common words (`the`, `is`, `of`, etc.).  
@@ -35,7 +35,7 @@ w(q,t) = (1 + log10(tf_q,t)) * log10(N / df_t)
   - **Synonyms:** yellow.  
 - **Interactive search:** type queries live, get ranked results instantly.
 
-## 📂 Project Structure
+##  Project Structure
 
 IR_Query_model<br>
 
@@ -54,7 +54,7 @@ IR_Query_model<br>
 
 ---
 
-## 🚀 Running the Model  
+##  Running the Model  
 
 ### 1. Install dependencies  
 ```bash
@@ -95,7 +95,7 @@ WordNet raw synonyms (used for highlighting): ['brother', 'buddy']
 
 (4 more search queries)
 ```
-## 🆚 Novelty Beyond Assignment Requirements
+## Novelty Beyond Assignment Requirements
 
 Compared to a basic VSM implementation, this project adds:
 
@@ -110,6 +110,6 @@ Compared to a basic VSM implementation, this project adds:
 - **Interactive Console** → lets you search dynamically without rerunning scripts.  
 - **Line-level Snippets** → shows the most relevant lines instead of whole documents along with first line of the file as the header for more context, which makes it easier for the user.  
 
-## 👨‍💻 Authors
+##  Authors
 
 Built by *Anish Gupta*, *Prakhar Sethi* and *Ritwik Bhattacharya* as part of **Lab 1 — VSM Information Retrieval** assignment.
